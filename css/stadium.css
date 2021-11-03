@@ -1,0 +1,281 @@
+#fullpage .section1{
+    background: no-repeat center center/cover;
+    background-image: url(../image/wallpaper09.png);
+    color: #000080;
+    font-size: 36px;
+    font-weight: 500;    
+}
+
+.section1 .wrapper {
+    height: 100vh;
+    
+    margin: 0 auto;
+    
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 .typing-demo {
+    width: 24ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    margin-bottom: 350px;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+    border-color: transparent
+    }
+}
+
+.section2 {
+  background-color: #0c0348;
+}
+
+.section2 .text_wrap {
+    max-width: 55rem;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    color: #F0FFFF;
+}
+
+.section2 .text_wrap h2 {
+    font-weight: 900;
+    font-size: 2.7rem;
+    max-width: 20ch;
+}
+
+#map {
+    margin: 0 auto;
+    width: 80%;
+    height: 480px;
+    margin-top: 50px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+}
+
+.section3 {
+  background-color: #655DBB;
+}
+
+.section3 .text_wrap {
+    max-width: 55rem;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    color: #F0FFFF;
+}
+
+.section3 .text_wrap h2 {
+    font-weight: 900;
+    font-size: 2.7rem;
+    max-width: 10ch;
+}
+
+.section3 .video_wrap {
+    width: 800px;
+    margin: 50px auto;
+}
+
+.section3 .video_wrap .video_ratio {
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+
+}
+.section3 .video_wrap .video_ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*slider*/
+.section4 {
+  background-color: #BBBBBC;
+}
+
+
+.section4 .text_wrap {
+  max-width: 55rem;
+  padding: 0 1.5rem 1rem 1.5rem;
+  margin: 0 auto;
+  color: #F0FFFF;
+}
+
+.section4 .text_wrap h2 {
+  font-weight: 900;
+  font-size: 2.7rem;
+  max-width: 20ch;
+}
+
+.section4 .swiper-container {
+  width: 650px;
+  height: 350px;
+}
+
+.section4 .swiper-wrapper {
+  margin-left: 12.5%;
+}
+
+.section4 .swiper-slide img {
+  width: 77%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.section__footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.section__footer:focus,
+.section__footer:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section__footer {
+  display: grid;
+  
+
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+
+}
+
+.section__footer .wrapper {
+  display: inline-flex; 
+  margin-left: 30%;
+}
+
+.section__footer .wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 70px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.section__footer .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.section__footer .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.section__footer .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.section__footer .wrapper .icon:hover span,
+.section__footer .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.section__footer .wrapper .facebook:hover,
+.section__footer .wrapper .facebook:hover .tooltip,
+.section__footer .wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.section__footer .wrapper .twitter:hover,
+.section__footer .wrapper .twitter:hover .tooltip,
+.section__footer .wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.section__footer .wrapper .instagram:hover,
+.section__footer .wrapper .instagram:hover .tooltip,
+.section__footer .wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+
+
+.section__footer .wrapper .youtube:hover,
+.section__footer .wrapper .youtube:hover .tooltip,
+.section__footer .wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}

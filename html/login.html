@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LOG-IN</title>
+        <link rel="stylesheet" href="../css/login2.css">
+        <script src="jquery-3.4.1.js"></script>
+    </head>
+
+<body>
+    <section class="login-form">
+        <h1>HELLO SPURS!</h1>
+        <form action="logincheck.php" method="post">
+                <div class="int-area">
+                    <input type="text" name="email" id="email" autocomplete="off" required />
+                    <label for="email">e-mail</label>
+                </div>
+                <div class="int-area">
+                    <input type="password"  name="password" id="password" autocomplete="off" required  />
+                    <label for="password">password</label>
+                </div>
+                <div class="btn-area">
+                    <button type="login">LOGIN</button>
+                </div>
+        </form>
+        <div class="caption">
+            <a href="register.html">REGISTER</a>
+        </div>
+    </section>
+        
+
+    <script>
+        let email = $('#email');
+        let password = $('#password');
+        let btn = $('#btn');
+
+        $(btn).on('click',function() {
+            if($(email).val() == "") {
+                $(email).next('label').addClass('warning');
+                setTimeout(function(){
+                    $('label').removeClass('warning');
+                },1500)
+            }
+            else if($(password).val() == "") {
+                $(password).next('label').addClass('warning');
+                setTimeout(function(){
+                    $('label').removeClass('warning');
+                },1500)
+            }
+        })
+    </script>
+
+    </body>
+
+</html>
+
+

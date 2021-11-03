@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>3주차 실습2</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+            body{
+                font-family: 'Noto Sans KR', sans-serif;
+                margin: 0;
+                overflow: hidden;
+            }
+            .header{
+                height:100px;
+                width:auto;
+                border-bottom: 5px solid #f4f1f1;
+                background-color: #f8f8f8;
+            }
+            .header2 {
+                text-align: center;
+                
+            }
+                
+            .bottom{
+                position: absolute;
+                bottom: 12px;
+                left: 0;
+                background-color: #fff;
+                /* border-top: 1px solid #ddd; */
+                width: 100vw;
+            }
+            #msg{
+                padding: 10px;
+                width: calc(100vw - 120px);
+                border-radius:25px;
+                border-color:#f4f1f1 ;
+                position:relative;
+                left:70px;
+                
+                
+            }
+            #msg:focus {
+                outline: none;
+            }
+            
+            #chat{
+                width: 100vw;
+                height: 100vh;
+                overflow-y: auto;
+            }
+            #send{
+                position:absolute;
+                bottom:5px;
+                right:28px;
+                border: 0px;
+                background-color: #fff;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header2"><i class="fas fa-chevron-left"></i></div>
+        <div class="header"><i class="fas fa-chevron-left" style="font-size:28px; color:#097ffe; padding: 12px 12px;"></i>
+        </div>
+        <div id="chat">
+        </div>
+        <div class="bottom">
+            <i class="fas fa-camera" style="font-size:32px; color:#818a95; position:absolute; left:20px; bottom:5px; "></i>
+            <input type="text" id="msg" placeholder="메세지를 입력하세요." />
+            <button id="send"><i class="fas fa-arrow-circle-up" style=" font-size:28px; color:#02ce48;"></i></button>
+        </div>
+
+        <script>
+            $(function(){
+                $('#send').click(function(){
+                    let msg = $('#msg').val();
+                    console.log(msg);
+
+                    let bubble = $('<div class="bubble"></div>');
+                    bubble.text(msg);
+                    $('#chat').append(bubble);
+
+                    $('#msg').val('');
+                })
+            });
+        </script>
+    </body>
+</html>
+
